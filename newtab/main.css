@@ -1,0 +1,216 @@
+:root {
+	--xlarge:170px;
+	--mlarge:50px;
+	--large:28px;
+	--medium:18px;
+	--small:16px;
+	--xsmall:14px;
+	--xxsmall:10px;
+}
+
+body {
+	margin:0 auto;
+	width:100%;
+	font-family: "Noto Sans KR", sans-serif;
+    background-image: url("https://source.unsplash.com/user/hbin12212/likes");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+body * {
+	font-family: "Noto Sans KR", sans-serif;
+}
+button {
+	background: initial ;
+	border:none;
+	box-shadow:none;
+	border-radius:0;
+	padding:0;
+	overflow:visible;
+	cursor:pointer
+}
+
+.main-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height:100vh;
+}
+.main-container .main-wrapper {
+	text-align: center;
+}
+
+/* 시계 */
+.main-wrapper .time-wrapper {
+	position:relative;
+}
+.main-wrapper .date {
+	font-size: var(--large);
+}
+.main-wrapper .time {
+	font-size: var(--xlarge);
+	margin-top: -35px;
+}
+.main-wrapper .seconds {
+	position:absolute;
+	bottom:40px;
+	right:0;
+	font-size: var(--mlarge);
+}
+
+/* 검색바 */
+.main-wrapper .search {
+	display: flex;
+	justify-content: center;
+}
+.main-wrapper #search-input {
+	width:600px;
+	padding:15px 0;
+	border-radius: 30px;
+	border: 0px;
+	font-size: var(--medium);
+	color: #ffffff;
+	background-color: rgba(0,0,0,.5);
+	text-align: center;
+}
+.main-wrapper #search-input::placeholder {
+	color:rgb(169,169,169);
+	font-size: var(--medium);
+}
+
+/* 명언 */
+.quote {
+	position: fixed;
+	bottom:0;
+	max-width: 800px;
+	padding: 0 10px;
+	margin-bottom: 20px;
+	font-weight: 300;
+	font-size: var(--small);
+	text-align: center;
+}
+
+/* 북마크바 */
+.bookmark-open {
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width:240px;
+	height: 20px;
+	padding:15px 30px;
+	font-size: var(--xsmall);
+	color:#ffffff;
+	background-color: rgba(0,0,0,.5);
+}
+.bookmark-close {
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width:240px;
+	height: 20px;
+	padding:15px 30px;
+	font-size: var(--xsmall);
+	color:#ffffff;
+}
+.bookmark-bar {
+	position: absolute;
+	top: 50px;
+	right: 0;
+	width:240px;
+	min-height:calc(100vh - 70px);
+	padding:10px 30px;
+	color: #ffffff;
+	background-color: rgba(0,0,0,.5);
+}
+
+/* 북마크 아이템 추가 버튼 */
+.bookmark-item-add-btn {
+	display: flex;
+	justify-content: center;
+	padding:10px;
+	margin:10px 0 35px;
+	font-size: var(--small);
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.1);
+	border: rgba(241,241,241,.2) .5px solid;
+}
+.bookmark-item-add-btn:hover {
+	background: rgba(255,255,255,.2);
+}
+
+/* 북마크 아이템 추가 폼 */
+.bookmark-item-input-form {
+	padding:12px;
+	margin:20px 0;
+	font-size: var(--small);
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.1);
+	border: rgba(241,241,241,.2) .5px solid;
+}
+
+.bookmark-item-input-form .bookmark-input {
+	margin-bottom:12px;
+}
+.bookmark-item-input-form .bookmark-input .label {
+	margin-bottom:3px;
+	font-size: var(--xsmall);
+}
+.bookmark-item-input-form .bookmark-input input {
+	width:200px;
+	height:20px;
+	padding:5px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+.bookmark-item-input-form .bookmark-item-input-btn {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 5px;
+	font-size: var(--xsmall);
+}
+.bookmark-item-input-btn button {
+	padding:5px 35px;
+	border-radius: 5px;
+	border: rgba(241,241,241,.2) .5px solid;
+}
+.bookmark-item-input-btn button:hover {
+	background-color: rgba(255,255,255,.1);
+}
+
+/* 북마크 리스트 */
+.bookmark-list a {
+	display: flex;
+	align-items: center;
+	color: #fff;
+	text-decoration: none;
+}
+.bookmark-list .url-icon {
+	margin-right: 8px;
+	font-size: 0;
+}
+.url-icon img {
+	vertical-align: middle;
+}
+
+/* 북마크 아이템 */
+.bookmark-list .bookmark-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding:15px;
+	margin-bottom: 20px;
+	font-size: var(--small);
+	border-radius: 5px;
+	border: rgba(241,241,241,.2) .5px solid;
+	background-color: rgba(255,255,255,.1);
+}
+.bookmark-item .del-btn {
+	font-size: var(--xxsmall);
+	color: #d3d3d3;
+	vertical-align: middle;
+}
