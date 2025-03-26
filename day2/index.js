@@ -1,3 +1,5 @@
+// MISSION 01
+
 let animal = 'cat';
 
 switch (animal) {
@@ -17,3 +19,15 @@ switch (animal) {
 		console.log('❌일치하는 동물이 없습니다❌')
 
 } 
+
+// MISSION 02
+
+let answer = '';
+
+function connectStrings(str1, str2) {
+	answer = str1 + ' ' + str2
+}
+
+connectStrings('hello','javascript');
+
+console.log(answer); // 출력결과 : hello javascript
